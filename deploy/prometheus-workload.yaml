@@ -26,7 +26,6 @@ spec:
               enabled: true
               prometheusSpec:
                 externalLabels:
-                  region: {{region}}
                   cluster: {{name}}
                 remoteWrite:
                 - url: "http://receive.thanos.kubelab.pro/api/v1/receive"
