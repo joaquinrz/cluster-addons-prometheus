@@ -32,7 +32,7 @@ spec:
                   name: Thanos
           valueFiles:
           - $values/deploy/prometheus-workload-values.yaml
-      - repoURL: https://github.com/joaquinrz/capi-gitops.git
+      - repoURL: https://github.com/joaquinrz/cluster-addons-prometheus.git
         targetRevision: dev
         ref: values
       destination:
