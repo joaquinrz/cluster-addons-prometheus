@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+patchesJson6902:
+  - target:
+      kind: Application
+      name: prometheus-workload
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: prometheus-workload-dev-westeurope
+      - op: replace
+        path: /spec/source/helm/parameters/1/value  # Assuming "clusterName" is the second parameter
+        value: "dev-westeurope"
+      - op: replace
+        path: /spec/destination/server
+        value: "https://dev-westeurope.vcluster-dev-westeurope:443"
