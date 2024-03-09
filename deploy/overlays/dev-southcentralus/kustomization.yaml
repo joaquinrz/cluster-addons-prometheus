@@ -8,7 +8,7 @@ patchesJson6902:
   - target:
       version: v1
       kind: Deployment
-      name: welcome-southcentral
+      name: welcome-php
     patch: |-
       - op: replace
         path: /spec/replicas
