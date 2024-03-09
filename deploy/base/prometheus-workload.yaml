@@ -21,6 +21,8 @@ spec:
           value: "clusterName"
         - name: prometheus.prometheusSpec.remoteWrite[0].url
           value: "http://receive.thanos.kubelab.pro/api/v1/receive"
+        - name: prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues
+          value: "false"
         - name: prometheus.prometheusSpec.remoteWrite[0].name
           value: "Thanos"
       valueFiles:
