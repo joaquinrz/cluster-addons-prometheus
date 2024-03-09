@@ -11,10 +11,10 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: prometheus-workload-prod-northcentralus
+        value: prometheus-workload-prod-eastus2
       - op: replace
         path: /spec/source/helm/parameters/1/value  # Assuming "clusterName" is the second parameter
-        value: "prod-northcentralus"
+        value: "prod-eastus2"
       - op: replace
         path: /spec/destination/server
-        value: "https://aks-prod-n-fleet-f22d63-2oh7f1bd.hcp.northcentralus.azmk8s.io:443"
+        value: "https://aks-prod-e-fleet-f22d63-mt3jvar8.hcp.eastus2.azmk8s.io:443"
