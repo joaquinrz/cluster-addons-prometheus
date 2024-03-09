@@ -6,7 +6,6 @@ bases:
 
 patchesJson6902:
   - target:
-      apiVersion: argoproj.io/v1alpha1
       kind: ApplicationSet
       name: prometheus-workload
     patch: |-
