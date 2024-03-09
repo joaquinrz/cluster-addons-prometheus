@@ -11,10 +11,10 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: prometheus-workload-preprod-westus2
+        value: prometheus-workload-prod-eastus
       - op: replace
         path: /spec/source/helm/parameters/1/value  # Assuming "clusterName" is the second parameter
-        value: "preprod-westus2"
+        value: "prod-eastus"
       - op: replace
         path: /spec/destination/server
-        value: "https://preprod-westus2.vcluster-preprod-westus2:443"
+        value: "https://prod-eastus.vcluster-prod-eastus:443"
