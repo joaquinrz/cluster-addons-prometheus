@@ -17,4 +17,4 @@ patchesJson6902:
         value: "dev-eastus"
       - op: replace
         path: /spec/destination/server
-        value: "dev-eastus"
+        value: "https://dev-eastus.vcluster-dev-eastus:443"

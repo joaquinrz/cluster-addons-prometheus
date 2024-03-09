@@ -17,4 +17,4 @@ patchesJson6902:
         value: "dev-southcentralus"
       - op: replace
         path: /spec/destination/server
-        value: "dev-southcentralus"
+        value: "https://dev-southcentralus.vcluster-dev-southcentralus:443"
