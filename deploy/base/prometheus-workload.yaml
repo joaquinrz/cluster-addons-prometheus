@@ -24,7 +24,7 @@ spec:
         - name: prometheus.prometheusSpec.remoteWrite[0].name
           value: "Thanos"
       valueFiles:
-        - https://raw.githubusercontent.com/joaquinrz/cluster-addons-prometheus/dev/deploy/prometheus-workload-values.yaml
+        - https://raw.githubusercontent.com/joaquinrz/cluster-addons-prometheus/preprod/deploy/prometheus-workload-values.yaml
   destination:
     server: "serverName"
     namespace: monitoring
