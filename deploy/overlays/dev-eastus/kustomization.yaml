@@ -6,28 +6,15 @@ bases:
 
 patchesJson6902:
   - target:
-      kind: ApplicationSet
+      kind: Application
       name: prometheus-workload
     patch: |-
       - op: replace
         path: /metadata/name
         value: prometheus-workload-dev-eastus
-
-# apiVersion: kustomize.config.k8s.io/v1beta1
-# kind: Kustomization
-
-# bases:
-# - ../../base
-
-# patchesJson6902:
-#   - target:
-#       version: v1
-#       kind: Deployment
-#       name: welcome-php
-#     patch: |-
-#       - op: replace
-#         path: /spec/replicas
-#         value: 2
-#       - op: replace
-#         path: /metadata/name
-#         value: welcome-eastus
+      - op: replace
+        path: /spec/source/helm/parameters/1/value  # Assuming "clusterName" is the second parameter
+        value: "dev-eastus"
+      - op: replace
+        path: /spec/destination/server
+        value: "dev-eastus"
