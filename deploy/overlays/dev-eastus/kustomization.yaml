@@ -7,12 +7,28 @@ bases:
 patchesJson6902:
   - target:
       version: v1
-      kind: Deployment
-      name: welcome-php
+      kind: ApplicationSet
+      name: prometheus-workload
     patch: |-
       - op: replace
-        path: /spec/replicas
-        value: 2
-      - op: replace
         path: /metadata/name
-        value: welcome-eastus
+        value: prometheus-workload-dev-eastus
+
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
+
+# bases:
+# - ../../base
+
+# patchesJson6902:
+#   - target:
+#       version: v1
+#       kind: Deployment
+#       name: welcome-php
+#     patch: |-
+#       - op: replace
+#         path: /spec/replicas
+#         value: 2
+#       - op: replace
+#         path: /metadata/name
+#         value: welcome-eastus
