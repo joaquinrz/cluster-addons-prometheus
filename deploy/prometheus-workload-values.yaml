@@ -21,14 +21,3 @@ kube-state-metrics:
   - nodes=[agentpool,node_kubernetes_io_instance-type]
 grafana:
   enabled: false
-prometheus:
-  prometheusSpec:
-    additionalScrapeConfigs:
-    - job_name: 'additional-metrics'
-      kubernetes_sd_configs:
-      - role: endpoints
-      relabel_configs:
-      - source_labels: [__meta_kubernetes_endpoints_label_helm_sh_chart]
-        action: keep
-        regex: .+
-
