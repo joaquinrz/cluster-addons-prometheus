@@ -20,4 +20,4 @@ patchesJson6902:
         value: "https://dev-eastus.vcluster-dev-eastus:443"
       - op: replace
         path: /spec/source/targetRevision
-        value: "45.10.1"
+        value: "46.0.0"
