@@ -18,3 +18,6 @@ patchesJson6902:
       - op: replace
         path: /spec/destination/server
         value: "https://aks-prepro-fleet-f22d63-3q0rv55i.hcp.eastus2.azmk8s.io:443"
+      - op: replace
+        path: /spec/source/targetRevision
+        value: "45.10.1"
