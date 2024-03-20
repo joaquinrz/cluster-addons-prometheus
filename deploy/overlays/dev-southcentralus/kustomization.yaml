@@ -18,3 +18,6 @@ patchesJson6902:
       - op: replace
         path: /spec/destination/server
         value: "https://dev-southcentralus.vcluster-dev-southcentralus:443"
+      - op: replace
+        path: /spec/source/targetRevision
+        value: "46.0.0"
