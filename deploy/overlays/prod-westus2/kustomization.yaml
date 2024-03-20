@@ -18,3 +18,6 @@ patchesJson6902:
       - op: replace
         path: /spec/destination/server
         value: "https://prod-westus2.vcluster-prod-westus2:443"
+      - op: replace
+        path: /spec/source/targetRevision
+        value: "45.10.1"
